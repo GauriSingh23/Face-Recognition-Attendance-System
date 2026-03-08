@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1> Place your face inside the box</h1>
+    <a href="/" class="back-btn">⬅ Back to Home</a>
+    <br>
+    <div class="video-box">
+        <img id="video-feed" src="{{ url_for('video_feed') }}" width="630" height="470">
+    </div >
+    <br>
+        <button  id="stop-btn" class="stop-btn">Stop</button>
+
+    <script>
+        document.getElementById('stop-btn').onclick = () => {
+            fetch('{{ url_for("shutdown") }}');
+            document.getElementById('video-feed').src = "";
+        };
+    </script>
+</body>
+</html>

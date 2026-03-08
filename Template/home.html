@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AttendAI – Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to AttendAI !</h1>
+    <p class="subtitle">Face Recognition Based Attendance System</p>
+    <div class="menu">
+        <a class="menu-btn" href="{{ url_for('attendance') }}">📸 Take Attendance</a>
+        <a class="menu-btn" href="{{ url_for('view_records') }}">📄 View Records</a>
+        <a class="menu-btn" href="#">⚙️ Settings </a>
+    </div>
+</body>
+</html>
