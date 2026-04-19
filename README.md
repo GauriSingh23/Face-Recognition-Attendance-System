@@ -11,4 +11,4 @@ Python 3.10, dlib-bin, face-recognition, face-recognition-models, Pillow, numpy,
 3. Install dependencies (see Requirements)
 4. Run:
    python app.py
-5. Open browser: http://127.0.0.1:5000
+
